@@ -4,7 +4,7 @@ from datetime import datetime
 
 from django.views import View
 from django.http import HttpResponse
-# from random \
+
 import random
 
 

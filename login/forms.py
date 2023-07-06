@@ -5,6 +5,13 @@ from django.contrib.auth.forms import UsernameField
 from django.forms import EmailField
 
 
+def validate_user(value):
+    if not User.objects.filter(username=value).exists():
+        raise ValidationError('User Does Not Exist')
+    return value
+
+user = UsernameField(validators=[validate_user])
+
 def validate_email(value):
    if User.objects.filter(email=value).exists():
        raise ValidationError('Email Already Exists')
