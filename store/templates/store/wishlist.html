@@ -27,7 +27,7 @@
 						      </tr>
 						    </thead>
 						    <tbody>
-						      {% for item in data %}
+						      {% for item in wishlist %}
                                 <tr class="text-center">
 
                                     <td class="product-remove"><a href="{% url 'store:remove_from_wishlist' item.product.id %}"><span class="ion-ios-close"></span></a></td>
